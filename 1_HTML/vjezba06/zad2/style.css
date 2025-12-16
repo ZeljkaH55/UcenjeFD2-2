@@ -8,13 +8,17 @@ body{
     display: grid;
     grid-template-areas: "a b c d";
     column-gap: 1rem;
+    justify-content: center;
 }
 .a{ grid-area: a;}
 .b{ grid-area: b;}
-.d{ grid-area: c;}
-.a{ grid-area: d;}
+.c{ grid-area: c;}
+.d{ grid-area: d;}
 
-
+h1 {
+    font-family: sans-serif;
+    font-size: 1.5rem;
+  }
 
 .panel{
     background-color: white;
@@ -23,6 +27,7 @@ body{
     border-radius: 5px;
     text-align: center;
     font-family: sans-serif;
+    font-size: 1rem;
 }
 .cijena{
     color: green;
