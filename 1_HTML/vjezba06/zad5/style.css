@@ -1,0 +1,168 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+    background: #0b1220;
+    color: #dbeafe;
+}
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h1, h2, h3, h4 {
+  color: #ffffff;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  text-decoration: underline #22d3ee; 
+}
+
+.nav{
+    background: #0e1628;
+    border-bottom: 1px solid #1e293b;
+
+}
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.logo {
+  color: #22d3ee;
+  font-weight: bold;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #cbd5f5;
+}
+
+nav a:hover {
+  color: #22d3ee;
+}
+
+.hero {
+text-align: center;
+padding: 5rem 0;
+}
+.hero h1 {
+  font-size: 2.5rem;
+}
+.hero h2 {
+  font-size: 2.2rem;
+  color: #22d3ee;
+  margin: 0.5rem 0;
+}
+.hero p {
+  max-width: 600px;
+  margin: 1.5rem auto;
+  line-height: 1.6;
+  color: #94a3b8;
+}
+.btn {
+  display: inline-block;
+  background: #22d3ee;
+  color: #020617;
+  padding: 0.8rem 1.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.skills {
+  padding: 4rem 0;
+  
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+  background: #111b30;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #1e293b;
+}
+.card h4 {
+  color: #22d3ee;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.video {
+    padding: 4rem 0;
+    text-align: center;   
+}
+
+.subtitle {
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+}
+
+.video-box {
+  height: 260px;
+  background: #111b30;
+  border-radius: 10px;
+  border: 1px solid #1e293b;
+}
+
+.contact {
+  padding: 4rem 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  border-radius: 6px;
+  border: none;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.form textarea {
+  height: 120px;
+}
+
+.contact-box {
+  background: #111b30;
+  border-radius: 10px;
+  border: 1px solid #1e293b;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid #1e293b;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
