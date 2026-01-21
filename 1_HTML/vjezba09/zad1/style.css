@@ -1,0 +1,32 @@
+body{
+    background-color: white;
+
+}
+
+@media (min-width: 425px) and (max-width: 600px){
+    body{
+        background-color: blue;
+
+
+    }
+    .container{
+        display: grid;
+        grid-template-areas: 
+        "a b"
+        "c d e"
+        "f";
+    }
+}
+
+@media (min-width: 601px){
+    body{
+        background-color: beige;
+    }
+   
+    .container{
+        display: grid;
+        grid-template-areas: 
+        "b"
+        "c f";
+    }
+}
