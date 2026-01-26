@@ -1,0 +1,28 @@
+/* GLOBAL */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* HERO */
+.hero {
+  background: url("https://picsum.photos/1600/500?drone") center/cover no-repeat;
+  color: white;
+  padding: 4rem 1rem;
+}
+
+/* KARTICE */
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* FOOTER (ako ga dodaš kasnije) */
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+}

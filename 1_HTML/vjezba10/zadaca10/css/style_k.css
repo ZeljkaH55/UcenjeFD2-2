@@ -1,0 +1,33 @@
+body{
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+.page-title {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* FORMA */
+.application-form {
+  max-width: 700px;
+  margin: 2rem auto;
+}
+
+.application-form label {
+  font-weight: 600;
+}
+
+.application-form input,
+.application-form select {
+  margin-bottom: 1rem;
+}
+
+/* SWITCH RAZMAK */
+.switch {
+  margin-bottom: 1.5rem;
+}
+
+/* GUMBI */
+.button-group {
+  margin-top: 1.5rem;
+}

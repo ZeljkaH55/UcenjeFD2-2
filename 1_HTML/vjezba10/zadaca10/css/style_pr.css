@@ -1,0 +1,28 @@
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* NASLOVI */
+.page-title {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* ACCORDION */
+.accordion-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.accordion-content {
+  background-color: #f9f9f9;
+}
+
+.accordion-content ul {
+  margin-left: 1.5rem;
+}
+
+.accordion-content li {
+  margin-bottom: 0.4rem;
+}
