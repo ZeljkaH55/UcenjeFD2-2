@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Hello world</title>
+    <style>
+        .nojs{
+            background-color: red;
+            color: white;
+            font-size: 2rem;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="ispis">
+
+    </p>
+    <div id="ue">
+
+    </div>
+
+    <button onclick="alert('hallo world 9')">
+        Klikni me
+    </button>
+
+    <div
+    onmouseover="this.style.backgroundColor='red'"
+    onmouseleave="this.style.backgroundColor='white'"
+    >
+        Edunova
+    </div>
+
+    <input type="text" name="" id="" style="font-size: 3rem;"
+    onkeyup="this.value=this.value.toUpperCase()"
+    >
+    
+    <noscript>
+        <div class="nojs">
+            vaš preglednik ne podržava JavaScript
+        </div>
+    </noscript>
+
+    <!-- Ako Želimo izvoditi JS -->
+     <script>
+        //ovo je jedna linija kometara
+
+        /*
+        komentar
+        kroz više linija
+        */
+
+        //alert('Hello wordl 1');
+
+        document.write('Hello world 2'); //ovo nećemo raditi
+
+        console.log('Hallo world 3');
+
+        //console.logiraj('hallo warld 4'); ovo nije funkcija
+        //console.logiraj'hallo warld 5'); fali zagrada sintax error
+
+     </script>
+
+     <!-- učitanje vanjske JS datoteke -->
+      <script src="skripta.js"></script>
+</body>
+</html>
