@@ -245,6 +245,114 @@ document.getElementById('izvedi').addEventListener('click', () =>
 
   return;
   }
+
+//--------------------------------------
+if (zadatak === '9'){
+//9. Upisanu vrijednost u polju c ispiši u rezultat
+
+  rezultat.innerHTML=c;
+
+
+  return;
+}
+
+
+//--------------------------------------------
+//10. ispiši umnožak a+b i c+d
+
+if (zadatak ==='10'){
+  const x = Number(a);
+  const y = Number(b);
+  const z = Number(c),k = Number(d);
+  console.log(x,y,z,k)
+
+    if(!x){
+      rezultat.innerHTML='Unesi broj u polje A';
+      return;
+    }
+    if(!y){
+      rezultat.innerHTML='Unesi broj u polje B';
+      return;
+    }
+    if(!z){
+      rezultat.innerHTML='Unesi broj u polje C';
+      return;
+    }
+    if(!k){
+      rezultat.innerHTML='Unesi broj u polje D';
+      return;
+    }
+
+  rezultat.innerHTML=(x+y)*(z+k);
+  
+
+  return;
+}
+
+
+//-----------------------------------------------------
+//11. Za upisano ime grada u polje B ispiši da li je sjedište Edunove ili ne
+
+if (zadatak ==='11'){
+  if(!b){
+    rezultat.innerHTML='Unesi imengrada';
+    return;
+  }
+  if(b.toLowerCase() === 'osijek'){
+    rezultat.innerHTML=`${b} je sjedište Edunove`;
+    return;
+  }else {
+    rezultat.innerHTML=`${b} nije sjedište Edunove`;
+    return;
+  }
+
+
+  return;
+}
+
+//--------------------------------------------------
+// 12. Za upisanu vrijednost u polju A upiši kubikažu
+
+if (zadatak ==='12'){
+  const x = Number(a);
+  if(!x || x<=0){
+      rezultat.innerHTML='Unesi broj u polje A veći od nule'
+      return;
+  }
+
+  rezultat.innerHTML=x*x*x;
+
+  return;
+}
+
+
+
+
+//--------------------------------------------------
+//13. Za upisani decimalni broj u polje D ispiši samo decimalni dio
+
+
+if (zadatak ==='13'){
+
+  const cijeliBroj = parseInt(d);
+  const decimalniBroj = parseFloat(d);
+
+  if (!decimalniBroj){
+    rezultat.innerHTML='Niste unijeli broj'
+    return;
+  }
+  console.log(cijeliBroj, decimalniBroj);
+
+  rezultat.innerHTML = decimalniBroj - cijeliBroj;
+  return;
+}
+
+
+
+
+
+
+
   // ovo će se ispisati ako u HTML dodatke option za zadatak a ovdje ga ne obradite
   rezultat.innerHTML = `Nepoznati zadatak ${zadatak}`;
 });

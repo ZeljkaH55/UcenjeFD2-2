@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Predložak zadaci EDUNOVA frontend developer</title>
-    <link id="theme-link" rel="stylesheet" href="style1.css" />
+    <link id="theme-link" rel="stylesheet" href="style.css" />
   </head>
 
   <body>
@@ -12,7 +12,7 @@
       <header class="header">
         <h1>Predložak zadaci EDUNOVA frontend developer</h1>
         <h2>Otvoriti Developer tools (F12 ili desni klik pa Inspect - provjeri)</h2>
-        <p>Odaberite zadatak, unesi vrijednosti A, B, C ili D (ovisno o zadatku) i klikni <strong>Izvedi</strong>.</p>
+        <p>Odaberite zadatak, unesi vrijednosti A i klikni <strong>Izvedi</strong>.</p>
       </header>
 
       <section class="card">
@@ -21,15 +21,16 @@
           <label class="selectWrap">
             <span>Odaberi zadatak</span>
             <select id="zadatak">
-              <option value="1">1. Ispiši veći broj između A i B</option>
-              <option value="2">2. Ispiši manji broj između A, B i C</option>
-              <option value="3">3. Zbroji sva četiri broja A, B, C i D</option>
-              <option value="4">4. Provjera punoljetnosti (Polje A)</option>
-              <option value="></option>
+              <option value="1">1. Naziv akcije</option>
+              <option value="2">2. Položio/Ne položio</option>
+              <option value="3">3. Ocjena prema bodovima</option>
+              <option value="4">4. Za uneseni broj ispiši da li je većo od 100 ili ne</option>
+              <option value="5">5. Za uneseni niz unesi broj znakova</option>
+              <option value="6">6. Za namjenrnicu ispiši da li je meso, voće ili ne možeš odrediti</option>
             </select>
           </label>
 
-          <button id="izvedi" class="btn" type="button">Izvedi</button>
+         
         </div>
 
         <div class="grid">
@@ -37,23 +38,12 @@
             <span>A</span>
             <input id="a" type="text" />
           </label>
-
-          <label class="field">
-            <span>B</span>
-            <input id="b" type="text" />
-          </label>
-
-          <label class="field">
-            <span>C</span>
-            <input id="c" type="text" />
-          </label>
-
-          <label class="field">
-            <span>D</span>
-            <input id="d" type="text" />
-          </label>
         </div>
-
+        <hr>
+        <div class="grid">
+        <button id="izvedi" class="btn" type="button">Izvedi</button>
+        </div>
+        
        
       </section>
 
@@ -64,11 +54,9 @@
 
       <footer class="footer">
         <small>Predložak zadaci EDUNOVA frontend developer</small>
-        <div id="theme-switcher-container" style="text-align: right; padding: 10px;"></div>
       </footer>
     </main>
 
-    <script src="themeSwitcher.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
