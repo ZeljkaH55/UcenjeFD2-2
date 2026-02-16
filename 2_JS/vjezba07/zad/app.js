@@ -52,7 +52,7 @@ document.getElementById('izvedi').addEventListener('click', () => {
       // kraj rješavanje 1. zadatak
     break;
 
-
+//---------------------------------------------------------------------------
 
     case '2':
 
@@ -106,32 +106,129 @@ document.getElementById('izvedi').addEventListener('click', () => {
       // kraj rješavanje 2. zadatak
     break;
 
-
+//---------------------------------------------------------------------------
 
     case '3':
       // rješavanje 3. zadatak
       //3. Za uneseni cijeli broj u polje B veći od 2 i manji od 100 
       // ispiši da li je Armstrongov broj ili ne.
 
+    let b3=Number(b);
+     // console.log(b3);
+      if(!b3){
+        rezultat.innerHTML="Nisi unio broj";
+        return;
+      }
+    //  console.log(b3);
+      if(b3<2 || b3>100){
+      rezultat.innerHTML=" Broj nije u zadanom rasponu, ponovi unos";
+      return;
+      }
+
+      let suma = 0;
+      let znamenaka1 = 0;
+      let znamenaka2 = 0;
+
+      if(b3<10){
+        suma = b3*b3*b3;
+      }else{
+        znamenaka2 = b3%10;
+        znamenaka1 = (b3 - znamenaka2)/10;
+        suma = znamenaka1*znamenaka1*znamenaka1 + znamenaka2*znamenaka2*znamenaka2
+      }
+      if(suma == b3){
+        rezultat.innerHTML= `${b3} = ${suma} - broj je Amstrongov broj`;
+      }else{
+           rezultat.innerHTML=`${b3} je različit od ${suma} - broj nije Amstrongov broj`;
+      }
+     
+
       // kraj rješavanje 3. zadatak
     break;
+//---------------------------------------------------------------------------
+
     case '4':
       // rješavanje 4. zadatak
+      //4. Za unesenu riječ u polje A provjerite da li je palindrom ili ne
 
+      let a4 = a;
+      j=a4.length-1;
+      for(let i=0; i<a4.length; i++){
+        console.log('i=', i, a4[i]);
+        console.log('j=',j,  a4[j]);
+        if(a4[i]!=a4[j]){
+          rezultat.innerHTML='Izraz nije palindrom';
+          return;
+        }
+        j--;
+      }
+      rezultat.innerHTML='Izraz je palindrom';
+      
       // kraj rješavanje 4. zadatak
     break;
+
+//---------------------------------------------------------------------------
     case '5':
       // rješavanje 5. zadatak
+      //5. Provjeri da li u nizu stopRijeci postoji riječ pronađena u polju B
+
+      let b5=b;
+      let duzinaStop = stopRijeci.length;
+      if(Number(b5)){
+      //console.log(b5);
+        rezultat.innerHTML="Unio si broj, unesi riječ";
+        return;
+      }
+
+        for(let i=0; i<duzinaStop; i++){
+          console.log(b5, stopRijeci[i])
+          if(b5 === stopRijeci[i]){
+            rezultat.innerHTML=`Riječ ${b5} se nalazi u stopRijeci`;
+            return;
+          }else{
+            rezultat.innerHTML=`Riječ ${b5} se ne nalazi u stopRijeci`;
+          
+          }
+        }
 
       // kraj rješavanje 5. zadatak
     break;
+
+    //---------------------------------------------------------------------------
     case '6':
       // rješavanje 6. zadatak
+      //6. Za unesenu riječ u polju A ispiši koliko ima samoglasnika i koliko suglasnika
+      
+      let a6=a;
+      if(Number(a6)){
+      //console.log(a6);
+        rezultat.innerHTML="Unio si broj, unesi riječ";
+        return;
+      }
+      duzinaA=a6.length;
+      let samoglasnik = 0;
+      for(let i=0; i<duzinaA; i++)
+        if(a6[i] == 'a' || a6[i] == 'e' || a6[i] == 'i' || a6[i] == 'o' || a6[i] == 'u'){
+          samoglasnik++
+        }
+        rezultat.innerHTML=`Riječ ${a6} ima ${samoglasnik} samoglasnika`;
 
       // kraj rješavanje 6. zadatak
     break;
+
+    //---------------------------------------------------------------------------
+
+
+
     case '7':
       // rješavanje 7. zadatak
+      // 7. Ispiši sve brojeve odvojeno znakom tab (\t) između A i B ili B i A. 
+        let a7=a;
+        let b7=b;
+        rezultat.innerHTML=`${a7}\t${b7}\tili\t${b7}\t${a7}`;
+
+
+
 
       // kraj rješavanje 7. zadatak
     break;
