@@ -151,18 +151,47 @@ document.getElementById('izvedi').addEventListener('click', () => {
       // rješavanje 4. zadatak
       //4. Za unesenu riječ u polje A provjerite da li je palindrom ili ne
 
-      let a4 = a;
-      j=a4.length-1;
-      for(let i=0; i<a4.length; i++){
-        console.log('i=', i, a4[i]);
-        console.log('j=',j,  a4[j]);
-        if(a4[i]!=a4[j]){
-          rezultat.innerHTML='Izraz nije palindrom';
-          return;
-        }
-        j--;
-      }
-      rezultat.innerHTML='Izraz je palindrom';
+//----------------moje riješenje-----------------------------------------
+    //  let a4 = a;
+    //  j=a4.length-1;
+    //  for(let i=0; i<a4.length; i++){
+    //    console.log('i=', i, a4[i]);
+    //    console.log('j=',j,  a4[j]);
+    //    if(a4[i]!=a4[j]){
+    //      rezultat.innerHTML='Izraz nije palindrom';
+    //      return;
+    //    }
+    //    j--;
+    //  }
+    //  rezultat.innerHTML='Izraz je palindrom';
+
+
+//-------------------RJEŠENJE--------------------------------------
+//Ružan Edo ode na žur
+let a4 = a;
+let s ='';
+for(let i=0;i<a4.length;i++){
+  if(a4[i]!=' '){
+    s+= a4[i].toLowerCase();
+  }
+}
+console.log(s)
+let duljine = s.length
+let palindrom = true
+for (let i=0; i< duljine/2; i++){
+  if(s[i] !== s[duljine - 1 -i]){
+    palindrom = false;
+   } 
+    
+    if(palindrom){
+      rezultat.innerHTML='palindrom'
+    }else{
+      rezultat.innerHTML='nije palindrom'
+    }
+  
+}
+
+ 
       
       // kraj rješavanje 4. zadatak
     break;
