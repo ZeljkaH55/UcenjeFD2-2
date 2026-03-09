@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine JS</title>
+    <script src="alpine3.15.8.js" defer></script>
+</head>
+<body>
+    <div x-data="{ open: false }">
+        <button x-show="!open" @click="open = true">Expand</button>
+        <button x-show="open" @click="open = false">Sakrij</button>
+ 
+        <span x-show="open">
+            Content...
+        </span>
+    </div>
+
+    <div x-data="{brojac:0}">
+        <h1 x-text="brojac"></h1>
+        <p @click="brojac++"; style="font-size:40px; cursor:pointer; user-select:none; color: rgb(42, 165, 106); font-weight: bold;"> + </p>
+        <p @click="brojac--"; style="font-size:30px; cursor:pointer; user-select:none; color: brown; font-weight: bold;"> - </p>
+    </div>
+</body>
+</html>
