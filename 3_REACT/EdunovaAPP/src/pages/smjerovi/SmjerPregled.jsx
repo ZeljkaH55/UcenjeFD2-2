@@ -1,10 +1,71 @@
-import { Route } from "react-router-dom";
+import { useEffect, useState } from "react"
+import SmjerService from "../../services/smjerovi/SmjerService"
+import { Table } from "react-bootstrap"
+import { NumericFormat } from "react-number-format"
+import { GrValidate } from "react-icons/gr"
 
-export default function SmjerPregled() {
+export default function SmjerPregled(){
+
+    const [smjerovi, setSmjerovi] = useState([])
+
+    useEffect(()=>{
+        ucitajSmjerove()
+    },[])
+
+    async function ucitajSmjerove() {
+        await SmjerService.get().then((odgovor)=>{
+            setSmjerovi(odgovor.data)
+        })
+    }
+
     return(
         <>
-            popis smjerova
-        </>
-    )
+        <Table>
+          <thead>
+            <tr>
+                <th>Naziv</th>
+                <th>Trajanje</th>
+                <th>Cijena</th>
+                <th>Datun pokretanja</th>
+                <th>Aktivan</th>
+                <th>Akcija</th>
+            </tr>
+          </thead>  
+          <tbody>
+            {smjerovi && smjerovi.map((smjer)=>(
+                <tr>
+                    <td>{smjer.naziv}</td>
+                    <td style={{ textAlign: "right" }}>{smjer.trajanje} h</td>
+                    
+                    <td style={{textAlign: "right"}}>
+                        <NumericFormat
+                        value={smjer.cijena}
+                        displayType={'text'}
+                        thousandSeparator='.'
+                        decimalSeparator=','
+                        suffix=' €'
+                        prefix="="
+                        decimalScale={2}
+                        fixedDecimalScale
 
+                        />
+                    </td>
+                    
+                    <td>{smjer.datumPokretanja}</td>
+                    <td>
+                        <GrValidate 
+                        size={25}
+                        color={smjer.aktivan ? 'green' : 'red'}
+                    
+                        />
+
+                    </td>
+                    <td>{smjer.aktivan}</td>
+                    <td>{smjer.akcija}</td>   
+                </tr>
+           ) )}
+          </tbody>
+        </Table>
+        </> 
+    )
 }
